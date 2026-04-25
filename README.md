@@ -7,6 +7,8 @@ Static GitHub Pages-style personal website based on local CV and resume material
 - `index.html` - home page
 - `research.html` - research focus areas
 - `projects.html` - selected platforms and projects
+- `software.html` - migration-analysis Python code section
+- `cover-art.html` - Blender cover-art render gallery placeholders
 - `publications.html` - selected publications and IP
 - `cv.html` - public CV summary
 - `assets/styles.css` - shared styling
