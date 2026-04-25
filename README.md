@@ -13,7 +13,7 @@ Static GitHub Pages-style personal website based on local CV and resume material
 
 ## Publish on GitHub Pages
 
-1. Create a repository named `terryjuang.github.io` or use an existing GitHub Pages repository.
+1. Use the repository named `TerryDJ.github.io`.
 2. Copy these files to the repository root.
 3. Commit and push to the default branch.
 4. In GitHub, confirm Pages is enabled for the default branch root.
