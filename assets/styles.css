@@ -202,9 +202,7 @@ li {
   font-size: 15px;
 }
 
-.hero-card,
-.callout,
-.card {
+.callout {
   background: rgba(255, 255, 255, .88);
   border: 1px solid rgba(45, 105, 168, .14);
   border-radius: var(--radius);
@@ -212,28 +210,24 @@ li {
   backdrop-filter: blur(8px);
 }
 
-.hero-card {
-  padding: 26px;
+.profile-panel {
+  padding: 6px 0 6px 26px;
+  border-left: 2px solid rgba(45, 105, 168, .35);
 }
 
-.hero-card p {
+.profile-panel p {
   color: var(--soft-ink);
 }
 
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  margin-top: 26px;
-  overflow: hidden;
-  border: 1px solid rgba(45, 105, 168, .16);
-  border-radius: var(--radius);
-  background: var(--line);
+.metric-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 24px;
 }
 
 .stat {
-  padding: 18px;
-  background: #fff;
+  min-width: 110px;
 }
 
 .stat strong {
@@ -269,34 +263,50 @@ li {
   margin: 0;
 }
 
-.grid {
+.feature-list {
+  border-top: 1px solid var(--line);
+}
+
+.feature-list a {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
 }
 
-.grid.two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.feature-list a:hover,
+.feature-list a:focus {
+  color: var(--ink);
+  text-decoration: none;
 }
 
-.card {
-  min-height: 100%;
-  padding: 22px;
-}
-
-.card p:last-child {
+.feature-list h4,
+.feature-list p {
   margin-bottom: 0;
 }
 
-.card-link {
-  color: var(--ink);
+.feature-list a:hover h4,
+.feature-list a:focus h4 {
+  color: var(--blue);
 }
 
-.card-link:hover {
-  color: var(--ink);
-  text-decoration: none;
-  transform: translateY(-2px);
-  border-color: rgba(45, 105, 168, .28);
+.capability-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 34px;
+  border-top: 1px solid var(--line);
+}
+
+.capability-list section {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.capability-list p,
+.text-columns p {
+  color: var(--soft-ink);
 }
 
 .item-title {
@@ -342,37 +352,52 @@ li {
 
 .feature-band {
   margin: 18px 0 30px;
-  padding: 28px;
-  border-radius: var(--radius);
-  color: #fff;
+  padding: 22px 0 22px 26px;
+  border-left: 3px solid var(--blue);
+  color: var(--ink);
   background:
-    linear-gradient(125deg, rgba(20, 34, 51, .96), rgba(45, 105, 168, .90) 56%, rgba(23, 111, 134, .88)),
-    var(--deep-blue);
+    linear-gradient(90deg, rgba(45, 105, 168, .10), rgba(45, 105, 168, 0) 72%);
 }
 
 .feature-band p,
 .feature-band .meta {
-  color: rgba(255, 255, 255, .78);
+  color: var(--soft-ink);
 }
 
 .feature-band a {
-  color: #fff;
+  color: var(--blue);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.placeholder-art {
+.art-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.art-slot {
   min-height: 230px;
   display: grid;
-  place-items: center;
-  padding: 28px;
-  border: 1px solid rgba(45, 105, 168, .16);
-  border-radius: var(--radius);
+  align-items: end;
+  padding: 0 0 18px;
+  border-bottom: 2px solid rgba(45, 105, 168, .22);
   color: var(--soft-ink);
-  background:
-    linear-gradient(135deg, rgba(237, 245, 251, .98), rgba(255, 255, 255, .94)),
-    var(--mist);
-  text-align: center;
+  background: linear-gradient(180deg, rgba(237, 245, 251, .70), rgba(237, 245, 251, 0));
+}
+
+.art-slot p {
+  margin: 0;
+}
+
+.text-columns {
+  columns: 2 280px;
+  column-gap: 46px;
+}
+
+.text-columns section {
+  break-inside: avoid;
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -397,8 +422,8 @@ li {
   }
 
   .hero,
-  .grid,
-  .grid.two {
+  .capability-list,
+  .art-list {
     grid-template-columns: 1fr;
   }
 
@@ -435,15 +460,24 @@ li {
     font-size: 12px;
   }
 
-  .stat-grid {
-    grid-template-columns: 1fr;
+  .feature-list a {
+    display: block;
   }
 
-  .hero-card,
-  .callout,
-  .card,
+  .profile-panel {
+    padding-left: 18px;
+  }
+
   .feature-band {
     padding: 20px;
+  }
+
+  .callout {
+    padding: 20px;
+  }
+
+  .feature-band {
+    padding-left: 18px;
   }
 }
 
