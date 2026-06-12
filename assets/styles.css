@@ -69,19 +69,18 @@ a:focus {
   flex: 0 0 auto;
   width: 66px;
   height: 66px;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
   border: 1px solid rgba(45, 105, 168, .18);
   border-radius: 50%;
-  color: #fff;
-  background:
-    linear-gradient(135deg, rgba(23, 111, 134, .98), rgba(45, 105, 168, .96)),
-    var(--blue);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0;
+  background: var(--mist);
   box-shadow: 0 12px 28px rgba(45, 105, 168, .20);
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .identity h1 {
@@ -331,6 +330,15 @@ li {
   border-bottom: 1px solid var(--line);
 }
 
+.publication-list p {
+  margin: 10px 0 0;
+}
+
+.publication-links {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -515,7 +523,6 @@ li {
   .portrait {
     width: 58px;
     height: 58px;
-    font-size: 19px;
   }
 
   .identity h1 {
